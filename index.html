@@ -343,6 +343,43 @@ let slideIndex_2 = 1;
 showSlides_2(slideIndex_2);
 
 
+// first slider
+let touchstartX = 0;
+let touchendX = 0;
+
+const slider = document.querySelector('.slider'); // Adjust this selector to your slider's container
+slider.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX;
+}, false);
+
+slider.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX;
+  handleSwipeGesture();
+}, false);
+
+function handleSwipeGesture() {
+  if (touchendX < touchstartX) plusSlides(1);
+  if (touchendX > touchstartX) plusSlides(-1);
+}
+
+//Second slider
+let touchstartX_2 = 0;
+let touchendX_2 = 0;
+
+const slider_2 = document.querySelector('.slider'); // Adjust this selector to your slider's container
+slider.addEventListener('touchstart', e => {
+  touchstartX_2 = e.changedTouches[0].screenX;
+}, false);
+
+slider.addEventListener('touchend', e => {
+  touchendX_2 = e.changedTouches[0].screenX;
+  handleSwipeGesture();
+}, false);
+
+function handleSwipeGesture() {
+  if (touchendX_2 < touchstartX_2) plusSlides_2(1);
+  if (touchendX_2 > touchstartX_2) plusSlides_2(-1);
+}
 
 // Next/previous controls
 function plusSlides(n) {
