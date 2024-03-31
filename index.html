@@ -33,7 +33,7 @@ $(document).ready(function () {
    <title>ElasticDiffusion</title>
 
 
-  <meta name="description" content="Project page for &#39;ElasticDiffusion: Training-free Arbitrary Size Image Generation.&#39;">
+  <meta name="description" content="Project page for &#39;ElasticDiffusion: Training-free Arbitrary Size Image Generation through Global-Local Content Separation.&#39;">
   <link rel="icon" href="./pics/wis_logo.jpg">
   <link rel="stylesheet" href="./static/css/index.css" type="text/css">
 </head>
@@ -41,11 +41,11 @@ $(document).ready(function () {
 <body>
 	  <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
     <tbody>
-      <tr>  <p class="title">ElasticDiffusion: Training-free Arbitrary Size Image Generation</p>
+      <tr>  <p class="title">ElasticDiffusion: Training-free Arbitrary Size Image Generation </br> through Global-Local Content Separation</p>
         <td style="font-size: 17pt;" align="center"></td>
       </tr>
           <tr>
-        <!-- <td style="font-size: 17pt;" align="center">Arxiv 2023</td> -->
+        <td style="font-size: 16pt; color:dimgrey" align="center">CVPR 2024</td>
       </tr>
     </tbody>
   </table>
@@ -140,6 +140,20 @@ $(document).ready(function () {
     <tr>
       <td><img src="./static/imgs/illustration.jpg" alt="" width="1000" /></td>
     </tr>
+
+    <tr>
+      <td><p style="margin-top: 20px; text-align: justify;">
+        This is possible due to our observation on the distinct behaviour of the unconditional and class-direction score.
+        The class direction score primarily dictates the image's overall composition by showing clustering along semantic regions (e.g. hair) and edges. Thus, upscaling this
+        score maintains global content in higher resolutions. In contrast, the unconditional score lacks inter-pixel correlation,
+        suggesting a localized influence in enhancing detail at the pixel level and computing it requires a pixel-level precision. 
+      </p></td>
+    </tr>
+
+    <tr>
+      <td><img src="./static/imgs/local-global-content.jpg" alt="" width="1000" /></td>
+    </tr>
+    
   </tbody>
 </table>
 <br>
@@ -307,11 +321,13 @@ $(document).ready(function () {
             <tbody>
               <tr>
                 <td height="100"><a href="./static/elasticdiffusion.pdf" target="_blank" rel="noopener noreferrer"><img src="./static/icons/paper_cover.jpg" alt="" width="140" height="167"></a></td>
-                <td width="750"><p><b>ElasticDiffusion: Training-free Arbitrary Size Image Generation
+                <td width="750"><p><b>ElasticDiffusion: Training-free Arbitrary Size Image Generation 
+                  </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through Global-Local Content Separation (55 MB)
                 </b><br>
                   Moayed Haji-Ali, Guha Balakrishnan, Vicente Ordonez.<br />
                                    <br>
-                  <em>Arxiv 2023</em><br><br>
+                  <em>CVPR 2024</em><br><br>
                    [<a href="./static/elasticdiffusion.pdf" target="_blank" rel="noopener noreferrer">paper</a>]</p>
                 </td>
               </tr>
